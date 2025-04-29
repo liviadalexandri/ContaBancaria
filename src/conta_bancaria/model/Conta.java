@@ -19,6 +19,8 @@ public class Conta {
 		this.titular = titular;
 		this.saldo = saldo;
 	}
+	
+	public Conta() {}
 
 	// Métodos Get e Set
 	public int getNumero() {
@@ -75,7 +77,6 @@ public class Conta {
 	
 	public void depositar(float valor) {
 		this.saldo += valor;
-		
 	}
 	
 	
@@ -96,12 +97,12 @@ public class Conta {
 		
 		System.out.println("*************************************");
 		System.out.println("           DADOS DA CONTA            ");
-		System.out.println("*************************************");
-		System.out.println("Número da Conta:" + this.numero);
-		System.out.println("Número da Agência:" + this.agencia);
-		System.out.println("Tipo da Conta:" + tipo);
-		System.out.println("Titular da Conta:" + this.titular);
-		System.out.println("Saldo da Conta:" + nfMoeda.format(this.saldo));
+		System.out.println("-------------------------------------");
+		System.out.println("Número da Conta: " + this.numero);
+		System.out.println("Número da Agência: " + this.agencia);
+		System.out.println("Tipo da Conta: " + tipo);
+		System.out.println("Titular da Conta: " + this.titular);
+		System.out.println("Saldo da Conta: " + nfMoeda.format(this.saldo));
 	}
 }
 
