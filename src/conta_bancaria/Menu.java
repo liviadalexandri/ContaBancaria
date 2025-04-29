@@ -1,24 +1,29 @@
 package conta_bancaria;
 
 import java.util.Scanner;
-
 import conta_bancaria.model.Conta;
+import conta_bancaria.model.ContaCorrente;
+import conta_bancaria.model.ContaPoupanca;
 import conta_bancaria.util.Cores;
 
-public class Menu {
 
-			public static void main(String[] args) {
+public class Menu {
+	
+      public static void main(String[] args) {
 				
 				Scanner leia = new Scanner(System.in);
 
 				int opcao;
 				
+				// Criar (instanciar) um objeto da Classe Conta
 				Conta c1 = new Conta(1, 123, 1, "Aylla", 500000);
 				c1.visualizar();
 				
+				// Sacar
 				c1.sacar(100);
 				c1.visualizar();
 				
+				// Depositar
 				c1.depositar(1000);
 				c1.visualizar();
 				
@@ -26,10 +31,27 @@ public class Menu {
 				c1.setTitular("Aylla Scaglia");
 				c1.visualizar();
 				
+				// Instanciando um Objeto da Classe Conta Corrente
+				ContaCorrente cc1 = new ContaCorrente(2, 456, 1, "Renata Negrini", 600000, 60000);				
+				cc1.visualizar();
+				
+				cc1.sacar(659000);
+				cc1.visualizar();
+				
+				cc1.depositar(50000);
+				cc1.visualizar();
+				
+				// Teste da Classe Conta Poupança
+				ContaPoupanca cp1 = new ContaPoupanca(2, 123, 2, "Lívia Cunha", 1000000, 14);
+				cp1.visualizar();
+		        cp1.sacar(1000);
+				cp1.visualizar();
+				cp1.depositar(5000);
+				cp1.visualizar();
 				
 				while (true) {
 
-					System.out.println(Cores.ANSI_BLACK_BACKGROUND+ "⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛"); 
+					System.out.println(Cores.ANSI_BLACK_BACKGROUND + Cores.TEXT_WHITE +"⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛"); 
 					System.out.println("                                                     ");
 					System.out.println("               BANCO DO BRAZIL COM Z                 ");
 					System.out.println("                                                     ");
@@ -47,7 +69,7 @@ public class Menu {
 					System.out.println("                                                     ");
 					System.out.println("-----------------------------------------------------");
 					System.out.println("                                                     ");
-					System.out.println("             Insira a opção desejada:                ");
+					System.out.println("              Insira a opção desejada:               ");
 					System.out.println("                                                     ");
 
 					opcao = leia.nextInt();
