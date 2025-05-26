@@ -12,7 +12,6 @@ O principal propósito é **automatizar e simplificar** o controle de contas **C
 - 🏗 **Classes Abstratas**
 - 🏷 **Interfaces**  
 
-Este projeto **serve como simulador funcional** e **base de estudo** para quem deseja aprofundar os conceitos fundamentais de **POO em Java**.
 
 ---
 
